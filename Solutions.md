@@ -347,14 +347,31 @@ ORDER BY avg_years_to_unicorn;
 
 ## Visualization
 ![Dasboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2011.png?raw=true)
---12 Most Common Founding Years Among Unicorns
-
+# Q12: Most Common Founding Years Among Unicorns
+## Solution
+```SQL
 SELECT year_founded, COUNT(*) AS company_count
 FROM dates
 GROUP BY year_founded
 ORDER BY company_count DESC
 LIMIT 10;
+```
+## Output
+|year_founded|company_count|
+|------------|-------------|
+|2015        |155          |
+|2016        |110          |
+|2014        |109          |
+|2012        |95           |
+|2013        |87           |
+|2011        |82           |
+|2017        |74           |
+|2018        |61           |
+|2019        |45           |
+|2010        |40           |
 
+## Output
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2012.png?raw=true)
 --13 Companies Founded Before 2010 but Valued Over $10 Billion
 
 SELECT c.company, d.year_founded, f.valuation
