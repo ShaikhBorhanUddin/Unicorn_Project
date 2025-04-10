@@ -15,7 +15,8 @@ LIMIT 5;
 |SHEIN       |100000000000|
 |Stripe      |95000000000|
 |Klarna      |46000000000|
-
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%201.png?raw=true)
 --2️ Count the Number of Unicorns per Continent
 
 SELECT continent, COUNT(*) AS unicorn_count
