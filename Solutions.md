@@ -300,15 +300,32 @@ LIMIT 10;
 ###
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%209b.png?raw=true)
 # Q10: Find the Oldest Unicorns (Companies Founded the Longest Ago but Still Unicorns)
-
+## Solution
+```SQL
 SELECT c.company, d.year_founded, f.valuation
 FROM dates d
 JOIN funding f ON d.company_id = f.company_id
 JOIN companies c ON d.company_id = c.company_id
 ORDER BY d.year_founded ASC
 LIMIT 10;
+```
+## Output
+|company                   |year_founded|valuation  |
+|--------------------------|------------|-----------|
+|Otto Bock HealthCare      |1919        |4000000000 |
+|Promasidor Holdings       |1979        |2000000000 |
+|Five Star Business Finance|1984        |1000000000 |
+|Radius Payment Solutions  |1990        |1000000000 |
+|Epic Games                |1991        |32000000000|
+|BGL Group                 |1992        |2000000000 |
+|Thirty Madison            |1993        |1000000000 |
+|Howden Group Holdings     |1994        |5000000000 |
+|Vice Media                |1994        |6000000000 |
+|Intarcia Therapeutics     |1995        |4000000000 |
 
---11 Average Time (in Years) from Founding to Unicorn Status by Continent
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2010.png?raw=true)
+# Q11: Average Time (in Years) from Founding to Unicorn Status by Continent
 
 SELECT c.continent,
        ROUND(AVG(EXTRACT(YEAR FROM d.date_joined) - d.year_founded), 2) AS avg_years_to_unicorn
