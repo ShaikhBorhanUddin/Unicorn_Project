@@ -1,5 +1,5 @@
 # 🦄 Unicorn Project - SQL Analysis
-
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/unicorn.png?raw=true)
 Welcome to the **Unicorn Project**! 🚀  
 This project explores a database of unicorn companies — privately held startup companies valued at over $1 billion. The goal is to perform insightful SQL queries to understand the distribution, funding, industries, and growth patterns of these high-growth companies globally.
 
