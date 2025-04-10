@@ -133,23 +133,103 @@ LIMIT 15;
 
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%205.png?raw=true)
---6️ Find top 10 Companies with the Highest Funding-to-Valuation Ratio
-
+# Q6️: Find top 10 Companies with the Highest Funding-to-Valuation Ratio
+## Solution
+```SQL
 SELECT c.company, f.funding, f.valuation, ROUND((f.funding::DECIMAL / f.valuation) * 100, 2) AS funding_ratio
 FROM funding f
 JOIN companies c ON f.company_id = c.company_id
 WHERE f.valuation > 0  -- Avoid division by zero
 ORDER BY funding_ratio DESC
 LIMIT 10;
+```
+## Output
+|company        |funding   |valuation |funding_ratio|
+|---------------|----------|----------|-------------|
+|Snapdeal       |2000000000|1000000000|200.00       |
+|REEF Technology|2000000000|1000000000|200.00       |
+|Hello TransTech|2000000000|1000000000|200.00       |
+|Fair           |2000000000|1000000000|200.00       |
+|Magic Leap     |3000000000|2000000000|150.00       |
+|Momenta        |1000000000|1000000000|100.00       |
+|SumUp          |1000000000|1000000000|100.00       |
+|OVH            |1000000000|1000000000|100.00       |
+|SaltPay        |1000000000|1000000000|100.00       |
+|Leap Motor     |1000000000|1000000000|100.00       |
 
---7️ Find the Most Common Industry by Continent
-
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%206.png?raw=true)
+# Q7️: Find the Most Common Industry by Continent
+## Solution
+```SQL
 SELECT c.continent, i.industry, COUNT(*) AS industry_count
 FROM industries i
 JOIN companies c ON i.company_id = c.company_id
 GROUP BY c.continent, i.industry
 ORDER BY c.continent, industry_count DESC;
+```
+## Output
+|continent    |industry                           |industry_count|
+|-------------|-----------------------------------|--------------|
+|Africa       |Fintech                            |2             |
+|Africa       |Mobile & telecommunications        |1             |
+|Asia         |E-commerce & direct-to-consumer    |54            |
+|Asia         |Fintech                            |38            |
+|Asia         |Internet software & services       |31            |
+|Asia         |Supply chain, logistics, & delivery|26            |
+|Asia         |Artificial intelligence            |26            |
+|Asia         |Auto & transportation              |20            |
+|Asia         |Mobile & telecommunications        |19            |
+|Asia         |Edtech                             |19            |
+|Asia         |Hardware                           |18            |
+|Asia         |Health                             |15            |
+|Asia         |Other                              |14            |
+|Asia         |Consumer & retail                  |12            |
+|Asia         |Travel                             |7             |
+|Asia         |Cybersecurity                      |7             |
+|Asia         |Data management & analytics        |4             |
+|Europe       |Fintech                            |47            |
+|Europe       |E-commerce & direct-to-consumer    |18            |
+|Europe       |Internet software & services       |15            |
+|Europe       |Other                              |11            |
+|Europe       |Health                             |8             |
+|Europe       |Auto & transportation              |7             |
+|Europe       |Artificial intelligence            |6             |
+|Europe       |Supply chain, logistics, & delivery|6             |
+|Europe       |Data management & analytics        |6             |
+|Europe       |Mobile & telecommunications        |5             |
+|Europe       |Hardware                           |5             |
+|Europe       |Travel                             |5             |
+|Europe       |Consumer & retail                  |2             |
+|Europe       |Cybersecurity                      |1             |
+|Europe       |Edtech                             |1             |
+|North America|Internet software & services       |154           |
+|North America|Fintech                            |129           |
+|North America|Health                             |51            |
+|North America|Artificial intelligence            |49            |
+|North America|Cybersecurity                      |42            |
+|North America|E-commerce & direct-to-consumer    |33            |
+|North America|Other                              |31            |
+|North America|Data management & analytics        |31            |
+|North America|Supply chain, logistics, & delivery|21            |
+|North America|Mobile & telecommunications        |12            |
+|North America|Hardware                           |11            |
+|North America|Consumer & retail                  |11            |
+|North America|Edtech                             |8             |
+|North America|Auto & transportation              |4             |
+|North America|Travel                             |2             |
+|Oceania      |Internet software & services       |5             |
+|Oceania      |Fintech                            |2             |
+|Oceania      |E-commerce & direct-to-consumer    |1             |
+|South America|Fintech                            |6             |
+|South America|E-commerce & direct-to-consumer    |5             |
+|South America|Supply chain, logistics, & delivery|4             |
+|South America|Artificial intelligence            |3             |
+|South America|Other                              |2             |
+|South America|Mobile & telecommunications        |1             |
 
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%207.png?raw=true)
 --8️ Find Companies That Raised More Than Industry Average
 
 SELECT c.company, f.funding, i.industry
