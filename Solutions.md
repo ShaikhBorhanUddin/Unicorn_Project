@@ -1,10 +1,20 @@
---1️ Find the Top 5 Most Valuable Companies
-
+# Q1️: Find the Top 5 Most Valuable Companies
+## Solution
+```SQL
 SELECT company, valuation 
 FROM funding 
 JOIN companies ON funding.company_id = companies.company_id
 ORDER BY valuation DESC
 LIMIT 5;
+```
+## Output
+|company     |valuation  |
+|------------|-----------|
+|Bytedance   |180000000000|
+|SpaceX      |100000000000|
+|SHEIN       |100000000000|
+|Stripe      |95000000000|
+|Klarna      |46000000000|
 
 --2️ Count the Number of Unicorns per Continent
 
