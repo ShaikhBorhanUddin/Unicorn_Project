@@ -36,13 +36,43 @@ ORDER BY unicorn_count DESC;
 |Africa       |3            |
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%202.png?raw=true)
---3️ Find Companies Founded Before 2000 That Became Unicorns After 2015
-
+# Q3️: Find Companies Founded Before 2000 That Became Unicorns After 2015
+## Solution
+```SQL
 SELECT c.company, d.year_founded, d.date_joined
 FROM dates d
 JOIN companies c ON d.company_id = c.company_id
 WHERE d.year_founded < 2000 AND d.date_joined >= '2015-01-01';
+```
+## Output
+|company                         |year_founded|date_joined|
+|--------------------------------|------------|-----------|
+|Otto Bock HealthCare            |1919        |2017-06-24 |
+|Numbrs                          |1999        |2019-08-22 |
+|YH Global                       |1997        |2017-09-21 |
+|Howden Group Holdings           |1994        |2020-09-29 |
+|Caris Life Sciences             |1996        |2021-05-12 |
+|OVH                             |1999        |2016-08-15 |
+|Radius Payment Solutions        |1990        |2017-11-27 |
+|Thirty Madison                  |1993        |2021-06-02 |
+|National Stock Exchange of India|1998        |2020-07-01 |
+|Easyhome                        |1999        |2018-02-12 |
+|iTutorGroup                     |1998        |2015-11-18 |
+|Starburst                       |1999        |2021-01-06 |
+|Five Star Business Finance      |1984        |2021-03-26 |
+|Promasidor Holdings             |1979        |2016-11-08 |
+|Weilong Foods                   |1999        |2021-05-08 |
+|Movile                          |1998        |2018-07-12 |
+|Global Switch                   |1998        |2016-12-22 |
+|InSightec                       |1999        |2020-03-06 |
+|BGL Group                       |1992        |2017-11-24 |
+|Epic Games                      |1991        |2018-10-26 |
+|Pine Labs                       |1998        |2020-01-24 |
+|Carzone                         |1995        |2019-03-01 |
+|Workhuman                       |1999        |2020-06-23 |
 
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%203.png?raw=true)
 --4️ Find the Average Valuation of Companies by Industry
 
 SELECT i.industry, ROUND(AVG(f.valuation), 2) AS avg_valuation
