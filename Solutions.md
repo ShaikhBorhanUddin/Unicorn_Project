@@ -230,8 +230,9 @@ ORDER BY c.continent, industry_count DESC;
 
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%207.png?raw=true)
---8️ Find Companies That Raised More Than Industry Average
-
+# Q8️: Find Top 20 Companies That Raised More Than Industry Average
+## Solution
+```SQL
 SELECT c.company, f.funding, i.industry
 FROM funding f
 JOIN industries i ON f.company_id = i.company_id
@@ -241,8 +242,35 @@ WHERE f.funding > (
     JOIN industries i2 ON f2.company_id = i2.company_id 
     WHERE i2.industry = i.industry
 )
-ORDER BY f.funding DESC;
+ORDER BY f.funding DESC
+Limit 20;
+```
+## Output
+|company           |funding    |industry                           |
+|------------------|-----------|-----------------------------------|
+|JUUL Labs         |14000000000|Consumer & retail                  |
+|Bytedance         |8000000000 |Artificial intelligence            |
+|Epic Games        |7000000000 |Other                              |
+|SpaceX            |7000000000 |Other                              |
+|Global Switch     |5000000000 |Hardware                           |
+|J&T Express       |5000000000 |Supply chain, logistics, & delivery|
+|Swiggy            |5000000000 |Supply chain, logistics, & delivery|
+|Xingsheng Selected|5000000000 |E-commerce & direct-to-consumer    |
+|Argo AI           |4000000000 |Artificial intelligence            |
+|Northvolt         |4000000000 |Other                              |
+|WM Motor          |4000000000 |Auto & transportation              |
+|Ola Cabs          |4000000000 |Auto & transportation              |
+|BYJU's            |4000000000 |Edtech                             |
+|Klarna            |4000000000 |Fintech                            |
+|Fanatics          |4000000000 |E-commerce & direct-to-consumer    |
+|Chehaoduo         |4000000000 |E-commerce & direct-to-consumer    |
+|Yuanfudao         |4000000000 |Edtech                             |
+|OYO Rooms         |3000000000 |Travel                             |
+|Databricks        |3000000000 |Data management & analytics        |
+|SVOLT             |3000000000 |Auto & transportation              |
 
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%208.png?raw=true)
 --9️ Find the Fastest-Growing Unicorns (Shortest Time from Founding to Unicorn Status)
 
 SELECT c.company, d.year_founded, d.date_joined, 
