@@ -326,14 +326,27 @@ LIMIT 10;
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2010.png?raw=true)
 # Q11: Average Time (in Years) from Founding to Unicorn Status by Continent
-
+## Solution
+```SQL
 SELECT c.continent,
        ROUND(AVG(EXTRACT(YEAR FROM d.date_joined) - d.year_founded), 2) AS avg_years_to_unicorn
 FROM companies c
 JOIN dates d ON c.company_id = d.company_id
 GROUP BY c.continent
 ORDER BY avg_years_to_unicorn;
+```
+## Output
+|continent    |avg_years_to_unicorn|
+|-------------|--------------------|
+|Asia         |6.61                |
+|North America|6.88                |
+|South America|7.05                |
+|Africa       |7.67                |
+|Oceania      |7.88                |
+|Europe       |8.25                |
 
+## Visualization
+![Dasboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2011.png?raw=true)
 --12 Most Common Founding Years Among Unicorns
 
 SELECT year_founded, COUNT(*) AS company_count
