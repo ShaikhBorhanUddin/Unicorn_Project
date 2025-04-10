@@ -17,13 +17,25 @@ LIMIT 5;
 |Klarna      |46000000000|
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%201.png?raw=true)
---2️ Count the Number of Unicorns per Continent
-
+# Q2️: Count the Number of Unicorns per Continent
+## Solution
+```SQL
 SELECT continent, COUNT(*) AS unicorn_count
 FROM companies
 GROUP BY continent
 ORDER BY unicorn_count DESC;
-
+```
+## Output
+|continent    |unicorn_count|
+|-------------|-------------|
+|North America|589          |
+|Asia         |310          |
+|Europe       |143          |
+|South America|21           |
+|Oceania      |8            |
+|Africa       |3            |
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%202.png?raw=true)
 --3️ Find Companies Founded Before 2000 That Became Unicorns After 2015
 
 SELECT c.company, d.year_founded, d.date_joined
