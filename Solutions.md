@@ -271,16 +271,35 @@ Limit 20;
 
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%208.png?raw=true)
---9️ Find the Fastest-Growing Unicorns (Shortest Time from Founding to Unicorn Status)
-
+# Q9️: Find the Fastest-Growing Unicorns (Shortest Time from Founding to Unicorn Status)
+## Solution
+```SQL
 SELECT c.company, d.year_founded, d.date_joined, 
        (d.date_joined - (d.year_founded || '-01-01')::DATE) AS days_to_unicorn
 FROM dates d
 JOIN companies c ON d.company_id = c.company_id
 ORDER BY days_to_unicorn ASC
 LIMIT 10;
+```
+## Output
+|company              |year_founded|date_joined|days_to_unicorn|
+|---------------------|------------|-----------|---------------|
+|Yidian Zixun         |2021        |2017-10-17 |-1172          |
+|Ola Electric Mobility|2019        |2019-07-02 |182            |
+|Playco               |2020        |2020-09-21 |264            |
+|candy.com            |2021        |2021-10-21 |293            |
+|ClickHouse           |2021        |2021-10-28 |300            |
+|Mensa Brands         |2021        |2021-11-16 |319            |
+|Flink Food           |2021        |2021-12-01 |334            |
+|Jokr                 |2021        |2021-12-02 |335            |
+|Avant                |2012        |2012-12-17 |351            |
+|GlobalBees           |2021        |2021-12-28 |361            |
 
---10 Find the Oldest Unicorns (Companies Founded the Longest Ago but Still Unicorns)
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%209a.png?raw=true)
+###
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%209b.png?raw=true)
+# Q10: Find the Oldest Unicorns (Companies Founded the Longest Ago but Still Unicorns)
 
 SELECT c.company, d.year_founded, f.valuation
 FROM dates d
