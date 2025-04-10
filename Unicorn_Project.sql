@@ -83,7 +83,7 @@ JOIN companies c ON i.company_id = c.company_id
 GROUP BY c.continent, i.industry
 ORDER BY c.continent, industry_count DESC;
 
---8️ Find Companies That Raised More Than Industry Average
+--8️ Find Top 20 Companies That Raised More Than Industry Average
 
 SELECT c.company, f.funding, i.industry
 FROM funding f
@@ -94,7 +94,8 @@ WHERE f.funding > (
     JOIN industries i2 ON f2.company_id = i2.company_id 
     WHERE i2.industry = i.industry
 )
-ORDER BY f.funding DESC;
+ORDER BY f.funding DESC
+LIMIT 20;
 
 --9️ Find the Fastest-Growing Unicorns (Shortest Time from Founding to Unicorn Status)
 
