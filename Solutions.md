@@ -73,22 +73,66 @@ WHERE d.year_founded < 2000 AND d.date_joined >= '2015-01-01';
 
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%203.png?raw=true)
---4️ Find the Average Valuation of Companies by Industry
-
+# Q4️: Find the Average Valuation of Companies by Industry
+## Solution
+```SQL
 SELECT i.industry, ROUND(AVG(f.valuation), 2) AS avg_valuation
 FROM funding f
 JOIN industries i ON f.company_id = i.company_id
 GROUP BY i.industry
 ORDER BY avg_valuation DESC;
+```
+## Output
+|industry                           |avg_valuation|
+|-----------------------------------|-------------|
+|Artificial intelligence            |4488095238.10|
+|Other                              |4344827586.21|
+|Consumer & retail                  |4240000000.00|
+|Fintech                            |3937500000.00|
+|E-commerce & direct-to-consumer    |3837837837.84|
+|Edtech                             |3571428571.43|
+|Data management & analytics        |3317073170.73|
+|Travel                             |3285714285.71|
+|Auto & transportation              |3193548387.10|
+|Supply chain, logistics, & delivery|3105263157.89|
+|Hardware                           |2911764705.88|
+|Internet software & services       |2902439024.39|
+|Health                             |2675675675.68|
+|Cybersecurity                      |2580000000.00|
+|Mobile & telecommunications        |2342105263.16|
 
---5️ Find Companies with the Most Selective Investors
-
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%204.png?raw=true)
+# Q5️: Find Companies with the Most Selective Investors
+## Solution
+```SQL
 SELECT c.company, LENGTH(f.selective_investors) - LENGTH(REPLACE(f.selective_investors, ',', '')) + 1 AS investor_count
 FROM funding f
 JOIN companies c ON f.company_id = c.company_id
 ORDER BY investor_count DESC
 LIMIT 15;
+```
+## Output
+|company   |investor_count|
+|----------|--------------|
+|Yixia     |4             |
+|Skydio    |4             |
+|Lightricks|4             |
+|Niantic   |4             |
+|Bytedance |4             |
+|SVOLT     |4             |
+|Evidation |4             |
+|Rappi     |4             |
+|eDaili    |3             |
+|Darwinbox |3             |
+|Mamaearth |3             |
+|MobileCoin|3             |
+|Clara     |3             |
+|CoinDCX   |3             |
+|Splashtop |3             |
 
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%205.png?raw=true)
 --6️ Find top 10 Companies with the Highest Funding-to-Valuation Ratio
 
 SELECT c.company, f.funding, f.valuation, ROUND((f.funding::DECIMAL / f.valuation) * 100, 2) AS funding_ratio
