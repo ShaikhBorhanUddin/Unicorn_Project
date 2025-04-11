@@ -12,9 +12,11 @@
 ![Project Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=flat-square)
 ###
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/unicorn.png?raw=true)
-Welcome to the **Unicorn Project**! 🚀  
-This project explores a database of unicorn companies — privately held startup companies valued at over $1 billion. The goal is to perform insightful SQL queries to understand the distribution, funding, industries, and growth patterns of these high-growth companies globally.
+Welcome to the Unicorn Project! 🚀
 
+This project explores a comprehensive database of unicorn companies — privately held startups with valuations exceeding $1 billion. These companies represent some of the most innovative and disruptive players in the global market, spanning various industries and geographies.
+
+The main objective of this project is to perform advanced SQL queries to extract meaningful insights about the unicorn landscape. Through structured data analysis, the aim is to understand key patterns and trends such as geographic distribution, identifying which countries and regions are producing the most unicorn companies, and analyzing how ecosystems like Silicon Valley, China, and emerging markets contribute to the global startup scene.
 ## 🗂️ Project Structure
 
 - **Database Name**: `Unicorn_Project`
@@ -86,18 +88,6 @@ Here’s what you’ll uncover with the SQL queries included:
 
 17. **Countries with Most Unicorns Founded After 2022**  
     Track emerging markets for unicorns in the latest years.
-
-## 🎯 Project Objectives
-
-- ✅ Design a PostgreSQL relational database schema
-- ✅ Clean and transform raw data into structured tables
-- ✅ Write advanced SQL queries for data exploration
-- ✅ Generate insights on:
-  - Inventory status and stock availability
-  - Supplier efficiency and delivery timelines
-  - Order fulfillment rates
-  - Inventory turnover and backorders
-  - Identifying bottlenecks in supply chain
 
 ## 🧩 Solution Workflow
 
