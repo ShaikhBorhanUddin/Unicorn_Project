@@ -87,6 +87,28 @@ Here’s what you’ll uncover with the SQL queries included:
 17. **Countries with Most Unicorns Founded After 2022**  
     Track emerging markets for unicorns in the latest years.
 
+## 🎯 Project Objectives
+
+- ✅ Design a PostgreSQL relational database schema
+- ✅ Clean and transform raw data into structured tables
+- ✅ Write advanced SQL queries for data exploration
+- ✅ Generate insights on:
+  - Inventory status and stock availability
+  - Supplier efficiency and delivery timelines
+  - Order fulfillment rates
+  - Inventory turnover and backorders
+  - Identifying bottlenecks in supply chain
+
+## 🧩 Solution Workflow
+
+Detailed solutions are documented in the [Solutions.md](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Solutions.md) file.
+
+The workflow includes:
+1. **Database Design**: ERD creation and schema setup
+2. **Data Cleaning**: Importing and refining raw CSV files
+3. **SQL Queries**: Analytical queries to address business questions
+4. *(Optional Future Step)*: Data visualization and dashboard creation
+
 ## 💡 Tools Used
 
 - **PostgreSQL**: For database creation and query execution.
