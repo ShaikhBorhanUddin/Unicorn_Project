@@ -89,7 +89,7 @@ Here’s what you’ll uncover with the SQL queries included:
 
 - **PostgreSQL**: For database creation and query execution.
 - **SQL**: Analytical querying language for insights.
-- **GitHub**: Project version control and collaboration.
+- **Tableau**: Visualization of query results.
 
 ## 🤝 Contribution
 
