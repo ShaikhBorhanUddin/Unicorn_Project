@@ -23,7 +23,9 @@ This project explores a database of unicorn companies — privately held startup
   - `dates`: Founding year and the date when the company achieved unicorn status.
   - `funding`: Valuation, total funding raised, and selective investors.
   - `industries`: Industry classification for each company.
-
+- **ER Diagram**
+###
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/ERD.png?raw=true)
 ## 🛠️ Setup
 
 1. Clone the repository.
