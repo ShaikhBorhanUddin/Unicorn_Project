@@ -372,15 +372,34 @@ LIMIT 10;
 
 ## Output
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2012.png?raw=true)
---13 Companies Founded Before 2010 but Valued Over $10 Billion
-
+# Q13: Companies Founded Before 2010 but Valued Over $10 Billion
+## Solution
+```SQL
 SELECT c.company, d.year_founded, f.valuation
 FROM companies c
 JOIN dates d ON c.company_id = d.company_id
 JOIN funding f ON c.company_id = f.company_id
 WHERE d.year_founded < 2010 AND f.valuation > 10000000000
 ORDER BY f.valuation DESC;
+```
+## Output
+|company               |year_founded|valuation   |
+|----------------------|------------|------------|
+|SpaceX                |2002        |100000000000|
+|SHEIN                 |2008        |100000000000|
+|Klarna                |2005        |46000000000 |
+|Epic Games            |1991        |32000000000 |
+|Fanatics              |2002        |27000000000 |
+|BYJU's                |2008        |22000000000 |
+|Grammarly             |2009        |13000000000 |
+|GoodLeap              |2003        |12000000000 |
+|Xingsheng Selected    |2009        |12000000000 |
+|Biosplice Therapeutics|2008        |12000000000 |
+|Global Switch         |1998        |11000000000 |
+|Weilong Foods         |1999        |11000000000 |
 
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2013.png?raw=true)
 --14 Continent with the Highest Total Unicorn Valuation
 
 SELECT c.continent, SUM(f.valuation) AS total_valuation
