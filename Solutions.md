@@ -400,37 +400,136 @@ ORDER BY f.valuation DESC;
 
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2013.png?raw=true)
---14 Continent with the Highest Total Unicorn Valuation
-
+# Q14: Continent with the Highest Total Unicorn Valuation
+## Solution
+```SQL
 SELECT c.continent, SUM(f.valuation) AS total_valuation
 FROM companies c
 JOIN funding f ON c.company_id = f.company_id
 GROUP BY c.continent
 ORDER BY total_valuation DESC
 LIMIT 1;
+```
+## Output
+|continent    |total_valuation|
+|-------------|---------------|
+|North America|2032000000000  |
 
---15 Top 3 Industries with the Highest Average Funding
-
+# Q15: Top 3 Industries with the Highest Average Funding
+## Solution
+```SQL
 SELECT i.industry, ROUND(AVG(f.funding), 2) AS avg_funding
 FROM industries i
 JOIN funding f ON i.company_id = f.company_id
 GROUP BY i.industry
 ORDER BY avg_funding DESC
 LIMIT 3;
+```
+## Output
+|industry             |avg_funding  |
+|---------------------|-------------|
+|Auto & transportation|1131419354.84|
+|Consumer & retail    |1019680000.00|
+|Travel               |901857142.86 |
 
---16 Industry Diversity: Number of Different Industries Per Country
-
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2015.png?raw=true)
+# Q16: Industry Diversity: Number of Different Industries Per Country
+## Solution
+```SQL
 SELECT c.country, COUNT(DISTINCT i.industry) AS industry_count
 FROM companies c
 JOIN industries i ON c.company_id = i.company_id
 GROUP BY c.country
 ORDER BY industry_count DESC;
+```
+## Output
+|country             |industry_count|
+|--------------------|--------------|
+|China               |15            |
+|United States       |15            |
+|United Kingdom      |12            |
+|Israel              |11            |
+|India               |11            |
+|Germany             |11            |
+|South Korea         |9             |
+|Canada              |9             |
+|France              |8             |
+|Sweden              |6             |
+|Singapore           |6             |
+|Brazil              |6             |
+|Switzerland         |5             |
+|Indonesia           |5             |
+|Hong Kong           |5             |
+|Japan               |4             |
+|Finland             |4             |
+|Netherlands         |4             |
+|Belgium             |3             |
+|Spain               |3             |
+|Australia           |3             |
+|Ireland             |3             |
+|Turkey              |3             |
+|Vietnam             |2             |
+|Austria             |2             |
+|Colombia            |2             |
+|Estonia             |2             |
+|Mexico              |2             |
+|Norway              |2             |
+|Philippines         |2             |
+|South Africa        |2             |
+|Thailand            |2             |
+|United Arab Emirates|2             |
+|Senegal             |1             |
+|Lithuania           |1             |
+|Bermuda             |1             |
+|Italy               |1             |
+|Denmark             |1             |
+|Czech Republic      |1             |
+|Croatia             |1             |
+|Malaysia            |1             |
+|Bahamas             |1             |
+|Luxembourg          |1             |
+|Nigeria             |1             |
+|Chile               |1             |
+|Argentina           |1             |
 
---17 Countries with the Highest Number of Unicorns Founded After 2022
-
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2016.png?raw=true)
+# Q17: Countries with the Highest Number of Unicorns Founded After 2022
+## Solution
+```SQL
 SELECT c.country, COUNT(*) AS unicorn_count
 FROM companies c
 JOIN dates d ON c.company_id = d.company_id
 WHERE d.date_joined >= '2022-01-01'
 GROUP BY c.country
 ORDER BY unicorn_count DESC;
+```
+## Output
+|country       |unicorn_count|
+|--------------|-------------|
+|United States |69           |
+|India         |11           |
+|United Kingdom|5            |
+|France        |4            |
+|Canada        |3            |
+|Israel        |3            |
+|Finland       |2            |
+|Ireland       |2            |
+|Australia     |2            |
+|Germany       |2            |
+|China         |2            |
+|Italy         |1            |
+|Belgium       |1            |
+|Chile         |1            |
+|Switzerland   |1            |
+|Estonia       |1            |
+|Indonesia     |1            |
+|Norway        |1            |
+|Brazil        |1            |
+|Turkey        |1            |
+|South Korea   |1            |
+|Spain         |1            |
+
+## Visualization
+![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%2017.png?raw=true)
