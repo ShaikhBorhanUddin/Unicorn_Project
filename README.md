@@ -11,10 +11,9 @@
 ![GitHub](https://img.shields.io/badge/Host-GitHub-black?logo=github)
 ![Project Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=flat-square)
 ###
-![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/unicorn.png?raw=true)
-Welcome to the Unicorn Project! 🚀
+<img src="https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/unicorn_cropped.png?raw=true" alt="Dashboard" style="width:100%;"/>
 
-This project explores a comprehensive database of unicorn companies — privately held startups with valuations exceeding $1 billion. These companies represent some of the most innovative and disruptive players in the global market, spanning various industries and geographies.
+Welcome to the Unicorn Project! This project explores a comprehensive database of unicorn companies — privately held startups with valuations exceeding $1 billion. These companies represent some of the most innovative and disruptive players in the global market, spanning various industries and geographies.
 
 The main objective of this project is to perform advanced SQL queries to extract meaningful insights about the unicorn landscape. Through structured data analysis, the aim is to understand key patterns and trends such as geographic distribution, identifying which countries and regions are producing the most unicorn companies, and analyzing how ecosystems like Silicon Valley, China, and emerging markets contribute to the global startup scene.
 ## 🗂️ Project Structure
