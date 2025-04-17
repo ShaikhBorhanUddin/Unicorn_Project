@@ -73,7 +73,7 @@ These 17 queries are critical in business analytics because they transform raw d
 Altogether, these queries offer a 360-degree view of the unicorn startup space, making them highly valuable for investors, analysts, policymakers, and entrepreneurs who rely on data to drive growth, mitigate risks, and identify the next wave of innovation.
 
 ## 🧠 Some Sample Queries
-SQL codes of some of these queries are included here.
+SQL codes of some of these queries with explanations are included here.
 ```sql
 SELECT c.country, COUNT(*) AS unicorn_count
 FROM companies c
@@ -82,6 +82,9 @@ WHERE d.date_joined >= '2022-01-01'
 GROUP BY c.country
 ORDER BY unicorn_count DESC;
 ```
+**Explanation:** 
+This SQL query retrieves the number of unicorn companies founded **from January 1, 2022 onward**, grouped by country. It joins the `companies` and `dates` tables on `company_id`, filters for recent entries using the `date_joined` field, and returns a ranked list of countries based on how many unicorns were created in each, in **descending order** of count.
+
 ```sql
 SELECT c.country, COUNT(DISTINCT i.industry) AS industry_count
 FROM companies c
@@ -89,6 +92,9 @@ JOIN industries i ON c.company_id = i.company_id
 GROUP BY c.country
 ORDER BY industry_count DESC;
 ```
+**Explanation:**
+This SQL query identifies the **diversity of industries** in which unicorn companies operate across different countries. By joining the `companies` and `industries` tables on `company_id`, it counts the **distinct industries** represented in each country. The results are grouped by country and sorted in **descending order** of industry count, revealing which countries have the most **industry-diverse unicorn ecosystems**.
+
 ```sql
 SELECT c.company, d.year_founded, f.valuation
 FROM companies c
@@ -97,6 +103,8 @@ JOIN funding f ON c.company_id = f.company_id
 WHERE d.year_founded < 2010 AND f.valuation > 10000000000
 ORDER BY f.valuation DESC;
 ```
+**Explanation:**
+This SQL query fetches unicorn companies that were **founded before 2010** and have a **valuation exceeding $10 billion**. It joins the `companies`, `dates`, and `funding` tables on `company_id`, applies filters on founding year and valuation, and returns the company name, founding year, and valuation. The results are sorted in **descending order of valuation**, highlighting the **oldest and most valuable unicorns**.
 
 ## 📈 Visual Insights
 
