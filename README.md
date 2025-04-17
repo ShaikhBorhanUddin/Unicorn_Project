@@ -53,60 +53,11 @@ Unicorn_Company_Analysis/
 2. Import the `Unicorn_Project.sql` file into your PostgreSQL environment.
 3. Run the queries provided to explore and analyze unicorn companies.
 
-## 📊 Analysis and Insights
+## 📊 Key Questions Answered
 
 Here’s what you’ll uncover with the SQL queries included:
 
-1. **Top 5 Most Valuable Companies**  
-   Identify the highest-valued unicorns globally.
-
-2. **Number of Unicorns per Continent**  
-   Understand which continents are leading in unicorn creation.
-
-3. **Early Founders, Late Unicorns**  
-   Find companies founded before 2000 but only became unicorns after 2015.
-
-4. **Average Valuation by Industry**  
-   Analyze the average valuation across industries.
-
-5. **Companies with the Most Selective Investors**  
-   Discover which companies attract the most investor attention.
-
-6. **Top 10 Companies with Highest Funding-to-Valuation Ratio**  
-   Assess companies maximizing funding relative to their valuation.
-
-7. **Most Common Industry by Continent**  
-   Understand regional industry trends.
-
-8. **Companies Raising Above Industry Average**  
-   Identify outliers outperforming their industry averages.
-
-9. **Fastest-Growing Unicorns**  
-   Companies with the shortest time from founding to unicorn status.
-
-10. **Oldest Unicorns**  
-    Long-established companies that still hold unicorn status.
-
-11. **Average Time to Unicorn by Continent**  
-    Regional differences in time to achieve unicorn status.
-
-12. **Most Common Founding Years**  
-    Highlighting the golden years for unicorn company foundations.
-
-13. **Pre-2010 Companies Worth Over $10 Billion**  
-    Successful older startups valued above $10 billion.
-
-14. **Continent with the Highest Total Unicorn Valuation**  
-    Where the money truly flows.
-
-15. **Top 3 Industries with the Highest Average Funding**  
-    Most lucrative industries for fundraising.
-
-16. **Industry Diversity by Country**  
-    Countries with the most diverse startup ecosystems.
-
-17. **Countries with Most Unicorns Founded After 2022**  
-    Track emerging markets for unicorns in the latest years.
+`Top 5 Most Valuable Companies` `Number of Unicorns per Continent` `Early Founders, Late Unicorns` `Average Valuation by Industry` `Companies with the Most Selective Investors` `Top 10 Companies with Highest Funding-to-Valuation Ratio` `Most Common Industry by Continent` `Companies Raising Above Industry Average` `Fastest-Growing Unicorns` `Oldest Unicorns` `Average Time to Unicorn by Continent` `Most Common Founding Years` `Pre-2010 Companies Worth Over $10 Billion` `Continent with the Highest Total Unicorn Valuation` `Top 3 Industries with the Highest Average Funding` `Industry Diversity by Country` `Countries with Most Unicorns Founded After 2022`
 
 ## 🧩 Solution Workflow
 
