@@ -35,6 +35,16 @@ Whether you're an aspiring data analyst, investor, or startup enthusiast, this p
 - **ER Diagram**
 ###
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/ERD.png?raw=true)
+
+## 📁 Folder Structure
+```bash
+Unicorn_Company_Analysis/
+│
+├── Dataset/                   # Raw dataset(s)
+├── images/                 # Visualization screenshots
+├── src/                    # Analysis notebook(s)
+├── README.md
+```
 ## 🛠️ Setup
 
 1. Clone the repository.
