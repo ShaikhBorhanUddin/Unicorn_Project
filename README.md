@@ -53,6 +53,15 @@ Unicorn_Company_Analysis/
 2. Import the `Unicorn_Project.sql` file into your PostgreSQL environment.
 3. Run the queries provided to explore and analyze unicorn companies.
 
+## 🧩 Solution Workflow
+
+Detailed solutions are documented in the [Solutions.md](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Solutions.md) file.
+
+The workflow includes:
+1. **Database Design**: ERD creation and schema setup
+2. **Data Cleaning**: Importing and refining raw CSV files
+3. **SQL Queries**: Analytical queries to address business questions
+4. *(Optional Future Step)*: Data visualization and dashboard creation
 ## 📊 Key Questions Answered
 
 Here’s what you’ll uncover with the SQL queries included:
@@ -65,30 +74,79 @@ Altogether, these queries offer a 360-degree view of the unicorn startup space, 
 
 ## 🧠 Some Sample Queries
 SQL codes of some of these queries are included here.
+```sql
+SELECT c.country, COUNT(*) AS unicorn_count
+FROM companies c
+JOIN dates d ON c.company_id = d.company_id
+WHERE d.date_joined >= '2022-01-01'
+GROUP BY c.country
+ORDER BY unicorn_count DESC;
+```
+```sql
+SELECT c.country, COUNT(DISTINCT i.industry) AS industry_count
+FROM companies c
+JOIN industries i ON c.company_id = i.company_id
+GROUP BY c.country
+ORDER BY industry_count DESC;
+```
+```sql
+SELECT c.company, d.year_founded, f.valuation
+FROM companies c
+JOIN dates d ON c.company_id = d.company_id
+JOIN funding f ON c.company_id = f.company_id
+WHERE d.year_founded < 2010 AND f.valuation > 10000000000
+ORDER BY f.valuation DESC;
+```
 
-## 🧩 Solution Workflow
+## 📈 Visual Insights
 
-Detailed solutions are documented in the [Solutions.md](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Solutions.md) file.
+Data visualization plays a crucial role in translating complex query results into intuitive insights. In this project, **Tableau** was utilized to create a variety of interactive and static visualizations, each tailored to the nature of the analysis for enhanced clarity and storytelling.
 
-The workflow includes:
-1. **Database Design**: ERD creation and schema setup
-2. **Data Cleaning**: Importing and refining raw CSV files
-3. **SQL Queries**: Analytical queries to address business questions
-4. *(Optional Future Step)*: Data visualization and dashboard creation
+### 📊 Bar Charts for Comparative Metrics
+
+For queries involving **aggregated metrics** such as average valuation or the funding-to-valuation ratio, bar charts were used for their clarity and simplicity. These visuals are effective in highlighting top-performing industries or companies, and help compare values across categories in a visually direct manner.
+
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+  <img src="Images/Sheet 4.png" alt="Average Valuation by Industry" style="height: 250px; object-fit: cover; margin: 5px;" />
+  <img src="Images/Sheet 6.png" alt="Top Funding-to-Valuation Ratios" style="height: 250px; object-fit: cover; margin: 5px;" />
+</div>
+
+### ⏱️ Gantt Charts and Tree Maps for Multivariate and Time-Series Data
+
+Queries that involve **time-based patterns** or **multidimensional parameters**, such as unicorns over time, founding year vs. valuation, or investor complexity, benefit from Gantt charts, line plots, or tree maps. These chart types provide layered insights, making it easier to detect temporal trends, relationships, and nested structures.
+
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; gap: 10px;">
+<img src="Images/Sheet 3.png" alt="Unicorn Growth Over Time" style="width: 48%; height: 250px; object-fit: cover; margin: 5px;" />
+<img src="Images/Sheet 13.png" alt="Investor Network Tree Map" style="width: 48%; height: 250px; object-fit: cover; margin: 5px;" />
+</div>
+
+### 🌍 Geographical Insights via World Maps
+
+For **country-specific and region-based queries**, such as the number of unicorns per continent, total valuation by region, or industry dominance by country, choropleth or world maps were used. These maps visually convey geographic concentrations and disparities in unicorn activity, helping to highlight regional strengths and gaps in the global startup ecosystem.
+
+<div align="center" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+<img src="Images/Sheet 16.png" alt="Delivery Time Analysis" width="49%" />
+<img src="Images/Sheet 17.png" alt="Payment Type Distribution" width="49%" />
+</div>
+
+Each visualization was carefully chosen to enhance understanding, enable pattern recognition, and support effective storytelling through data.
 
 ## 💡 Tools Used
 
-- **PostgreSQL**: For database creation and query execution.
-- **SQL**: Analytical querying language for insights.
-- **Tableau**: Visualization of query results.
-
-## 🤝 Contribution
-
-Feel free to fork the repository, improve the queries, or add visualizations!
+**`PostgreSQL`** **`Tableau`** **`Microsoft Excel`**
 
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+## 🤝 Contact
+Shaikh Borhan Uddin
+📧 shaikhborhanuddin@gmail.com
+🔗 LinkedIn
+🌐 Portfolio
+
+Feel free to fork the repository, improve the queries, or add visualizations!
+
 
 ---
 
