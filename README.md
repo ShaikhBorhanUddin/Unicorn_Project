@@ -41,11 +41,11 @@ Whether you're an aspiring data analyst, investor, or startup enthusiast, this p
 Unicorn_Company_Analysis/
 │
 ├── Dataset/                   # Raw dataset(s)
-├── Images/                 
+├── Images/                    # Visualizations
 ├── Licence                 
 ├── README.md
-├── Solutions.md
-├── Unicorn_Project.sql
+├── Solutions.md               # answer to SQL queries with visualizations
+├── Unicorn_Project.sql        # SQL codes
 ```
 ## 🛠️ Setup
 
