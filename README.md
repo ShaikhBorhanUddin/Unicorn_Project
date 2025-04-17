@@ -13,11 +13,19 @@
 ###
 <img src="https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/unicorn_cropped.png?raw=true" alt="Dashboard" style="width:100%;"/>
 
-Welcome to the Unicorn Project! This project explores a comprehensive database of unicorn companies — privately held startups with valuations exceeding $1 billion. These companies represent some of the most innovative and disruptive players in the global market, spanning various industries and geographies.
+## 📍 Project Overview
 
-The main objective of this project is to perform advanced SQL queries to extract meaningful insights about the unicorn landscape. Through structured data analysis, the aim is to understand key patterns and trends such as geographic distribution, identifying which countries and regions are producing the most unicorn companies, and analyzing how ecosystems like Silicon Valley, China, and emerging markets contribute to the global startup scene.
-## 🗂️ Project Structure
+The **Unicorn Company Analysis** project aims to explore and analyze the global landscape of unicorn startups — privately held companies valued at over $1 billion. Using Python and data visualization libraries like Matplotlib and Seaborn, this project uncovers key insights about the distribution, growth trends, and industry representation of unicorns across the world. The main objectives of this project include:
+- Understanding the historical growth of unicorns over time.
+- Identifying the top countries and industries producing the most unicorns.
+- Analyzing valuation ranges and spotting the highest-valued companies.
+- Exploring investment patterns and funding trends.
 
+Whether you're an aspiring data analyst, investor, or startup enthusiast, this project provides data-driven perspectives on one of the most exciting segments of the global startup ecosystem.
+
+## 📦 Dataset Information
+
+- **Source**: [Insert data source or link if applicable]
 - **Database Name**: `Unicorn_Project`
 - **Tables**:
   - `companies`: Company details like name, city, country, and continent.
