@@ -143,6 +143,9 @@ Each visualization was carefully chosen to enhance understanding, enable pattern
 
 **`PostgreSQL`** **`Tableau`** **`Microsoft Excel`**
 
+PostgreSQL served as the primary database management system for this project. It was used to store, manage, and query the unicorn company dataset efficiently. Complex SQL queries were executed to extract insights on valuation trends, industry diversity, regional growth patterns, and more. Its powerful support for joins, aggregations, and window functions made it ideal for analytical exploration. Tableau was used for data visualization and storytelling. The insights generated through SQL were visualized using interactive dashboards and charts, enabling clearer pattern recognition and comparison. From bar charts and tree maps to time series and world maps, Tableau helped translate raw data into intuitive and visually compelling narratives. Excel played a key role in initial data cleaning, quick summaries, and exploratory analysis. It was also used for formatting raw CSV files before importing them into PostgreSQL, and for creating pivot tables and supplementary charts to support deeper inspection of individual metrics.
+
+These tools together provided a robust end-to-end workflow—from querying and analysis to visualization and presentation.
 ## 📄 License
 
 This project is licensed under the MIT License.
