@@ -114,9 +114,9 @@ Data visualization plays a crucial role in translating complex query results int
 
 For queries involving **aggregated metrics** such as average valuation or the funding-to-valuation ratio, bar charts were used for their clarity and simplicity. These visuals are effective in highlighting top-performing industries or companies, and help compare values across categories in a visually direct manner.
 
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; width: 100%; gap: 5px;"> 
-<img src="Images/Sheet 4.png" alt="Average Valuation by Industry" style="height: 250px; object-fit: cover; margin: 5px;" />
-<img src="Images/Sheet 6.png" alt="Top Funding-to-Valuation Ratios" style="height: 250px; object-fit: cover; margin: 5px;" />
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; width: 100%; gap: 10px;"> 
+<img src="Images/Sheet 4.png" alt="Average Valuation by Industry" style="height: 240px; object-fit: cover; margin: 5px;" />
+<img src="Images/Sheet 6.png" alt="Top Funding-to-Valuation Ratios" style="height: 240px; object-fit: cover; margin: 5px;" />
 </div>
 
 ### ⏱️ Gantt Charts and Tree Maps for Multivariate and Time-Series Data
