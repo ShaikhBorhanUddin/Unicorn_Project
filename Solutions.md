@@ -99,6 +99,9 @@ The table highlights **23 companies** that were **founded before the year 2000**
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%203.png?raw=true)
 # Q4️: Find the Average Valuation of Companies by Industry
+
+This question is crucial in business intelligence as it reveals **which industries attract the highest investor valuations**, helping stakeholders understand where market confidence and capital are most concentrated. For **investors**, it highlights the most lucrative sectors. For **founders and policymakers**, it helps benchmark industry performance and prioritize strategic development. Overall, analyzing average valuations by industry offers a clear snapshot of **economic value distribution**, guiding decisions in **investment strategy**, **industry analysis**, and **competitive positioning**.
+
 ## Solution
 ```SQL
 SELECT i.industry, ROUND(AVG(f.valuation), 2) AS avg_valuation
@@ -107,6 +110,8 @@ JOIN industries i ON f.company_id = i.company_id
 GROUP BY i.industry
 ORDER BY avg_valuation DESC;
 ```
+This SQL query calculates the **average valuation** of unicorn companies across different **industries**. It joins the `funding` table (which contains company valuations) with the `industries` table using the `company_id` key. Then it uses `AVG(f.valuation)` to compute the average valuation for each industry and `ROUND(..., 2)` to limit the result to two decimal places. The `GROUP BY i.industry` clause ensures that the average is calculated per industry, and the final result is sorted in descending order of average valuation using `ORDER BY avg_valuation DESC`, so the highest-valued industries appear first.
+
 ## Output
 |industry                           |avg_valuation|
 |-----------------------------------|-------------|
@@ -126,9 +131,15 @@ ORDER BY avg_valuation DESC;
 |Cybersecurity                      |2580000000.00|
 |Mobile & telecommunications        |2342105263.16|
 
+The chart lists industries by their **average company valuation**, providing insight into which sectors attract the **highest investor confidence**. At the top is **Artificial Intelligence**, with an average valuation of over **$4.4 billion**, reflecting the growing importance of AI in driving innovation and automation. Close behind are **"Other"** and **Consumer & Retail**, both exceeding **$4.2 billion**, indicating robust market activity in diverse and consumer-facing domains. **Fintech** and **E-commerce** follow, highlighting strong investor interest in digital finance and online commerce. Industries like **Health**, **Cybersecurity**, and **Telecommunications** have lower average valuations comparatively, though still substantial—showing they are essential but perhaps more saturated or regulated. This breakdown is invaluable for identifying **high-value sectors** for investment and **strategic focus**.
+
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%204.png?raw=true)
+
 # Q5️: Find Companies with the Most Selective Investors
+
+This question is important in business intelligence because it identifies companies that have attracted **a larger number of distinct investors**, indicating **broad investor confidence and appeal**. Companies with a wide base of selective investors are often seen as **more stable, better networked, and strategically diverse** in their backing. These insights are valuable for venture capitalists, analysts, and startup founders alike—helping assess market credibility, investor behavior, and funding trends across companies.
+
 ## Solution
 ```SQL
 SELECT c.company, LENGTH(f.selective_investors) - LENGTH(REPLACE(f.selective_investors, ',', '')) + 1 AS investor_count
@@ -137,6 +148,10 @@ JOIN companies c ON f.company_id = c.company_id
 ORDER BY investor_count DESC
 LIMIT 15;
 ```
+This SQL query calculates the **number of investors** listed in the `selective_investors` column for each company. Since the investors are stored as a comma-separated list, the expression
+`LENGTH(f.selective_investors) - LENGTH(REPLACE(f.selective_investors, ',', '')) + 1`
+counts how many commas are in the string and adds one to get the total number of investors. The query joins the `funding` and `companies` tables on `company_id`, then orders the results in descending order of `investor_count` and limits the output to the **top 15** companies with the most listed investors.
+
 ## Output
 |company   |investor_count|
 |----------|--------------|
@@ -156,8 +171,11 @@ LIMIT 15;
 |CoinDCX   |3             |
 |Splashtop |3             |
 
+The table highlights the **top 15 unicorn companies** with the **highest number of selective investors**. Most companies in this list have **3 or 4 major investors**, suggesting a **moderately diversified backing**. Companies like **Bytedance**, **Niantic**, **Skydio**, and **Yixia** top the list with **4** investors each, indicating they have attracted interest from multiple key stakeholders—often a sign of **strong market potential and trust**. While the total count isn't very high, it reflects a targeted investment approach where only a few selective investors are backing these companies, likely due to strategic alignment or exclusivity in funding rounds.
+
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%205.png?raw=true)
+
 # Q6️: Find top 10 Companies with the Highest Funding-to-Valuation Ratio
 ## Solution
 ```SQL
