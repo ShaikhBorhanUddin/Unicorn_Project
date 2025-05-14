@@ -177,6 +177,9 @@ The table highlights the **top 15 unicorn companies** with the **highest number 
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%205.png?raw=true)
 
 # Q6️: Find top 10 Companies with the Highest Funding-to-Valuation Ratio
+
+In business intelligence, analyzing the **funding-to-valuation ratio** helps investors and analysts understand how efficiently a company is raising capital relative to its market valuation. **A high ratio** may suggest a company has raised a lot of funding compared to its worth, potentially indicating aggressive fundraising or undervaluation. **A low ratio** might reflect high valuation with relatively little external funding—possibly signaling strong organic growth or brand power. This metric is crucial for **benchmarking financial strategies** and identifying companies that may be **over- or under-capitalized**.
+
 ## Solution
 ```SQL
 SELECT c.company, f.funding, f.valuation, ROUND((f.funding::DECIMAL / f.valuation) * 100, 2) AS funding_ratio
@@ -186,6 +189,8 @@ WHERE f.valuation > 0  -- Avoid division by zero
 ORDER BY funding_ratio DESC
 LIMIT 10;
 ```
+This SQL query calculates the funding-to-valuation ratio for each company as a percentage. It begins by joining the `funding` and `companies` tables using the `company_id` column to bring in company names alongside financial data. The condition `f.valuation > 0` ensures that companies with a valuation of zero are excluded to prevent division errors. The ratio itself is computed by dividing the `funding` amount by the `valuation`, casting the result to a decimal for accuracy, and multiplying by 100 to express it as a percentage. The `ROUND` function limits the result to two decimal places for readability. Finally, the results are sorted in descending order based on the calculated ratio, and the top 10 companies with the highest funding-to-valuation percentages are displayed.
+
 ## Output
 |company        |funding   |valuation |funding_ratio|
 |---------------|----------|----------|-------------|
@@ -200,8 +205,11 @@ LIMIT 10;
 |SaltPay        |1000000000|1000000000|100.00       |
 |Leap Motor     |1000000000|1000000000|100.00       |
 
+The table showcases the **top 10 unicorn companies** with the **highest funding-to-valuation ratios**, indicating how much capital they have raised relative to their overall valuation. Remarkably, **Snapdeal**, **REEF Technology**, **Hello TransTech**, and **Fair** all have a **funding-to-valuation ratio of 200%**, meaning they have raised **twice their total valuation**—a possible signal of overcapitalization or significant funding burn. Companies like **Magic Leap** follow with a **150% ratio**, while others like **Momenta**, **OVH**, and **SaltPay** have a **1:1 funding-to-valuation ratio (100%)**, suggesting an exact balance between funds raised and current market valuation. These metrics can highlight potential **investment inefficiencies or high-risk strategies**.
+
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%206.png?raw=true)
+
 # Q7️: Find the Most Common Industry by Continent
 ## Solution
 ```SQL
