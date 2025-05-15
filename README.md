@@ -26,15 +26,45 @@ Whether you're an aspiring data analyst, investor, or startup enthusiast, this p
 
 ## 📦 Dataset Information
 
-- **Source**: [Unicorn Dataset](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/tree/main/Dataset)
-- **Database Name**: `Unicorn_Project`
-- **Tables**:
-  - `companies`: Company details like name, city, country, and continent.
-  - `dates`: Founding year and the date when the company achieved unicorn status.
-  - `funding`: Valuation, total funding raised, and selective investors.
-  - `industries`: Industry classification for each company.
-- **ER Diagram**
-###
+The database integrates key dimensions such as company identity, location, funding details, industry classification, and timeline to unicorn status. By combining business attributes with geographic and financial metrics, the database enables powerful analysis of growth patterns, market trends, regional distribution, and investment dynamics within the global startup ecosystem. This setup supports complex querying to explore how different industries, continents, and founding years influence the trajectory toward unicorn valuation. To access the database click [link](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/tree/main/Dataset). The tables of the database is described in the following tables.
+
+### 🧾 Dates
+
+| Column        | Description                                           |
+|---------------|-------------------------------------------------------|
+| `company_id`  | A unique identifier assigned to each company.         |
+| `date_joined` | The date the company achieved unicorn status.         |
+| `year_founded`| The year the company was originally founded.          |
+
+### 💰 Funding
+
+| Column           | Description                                           |
+|------------------|-------------------------------------------------------|
+| `company_id`     | A unique identifier assigned to each company.         |
+| `valuation`      | The company's valuation in US dollars.                |
+| `funding`        | Total funding amount raised by the company in USD.    |
+| `select_investors` | A list of notable or key investors in the company. |
+
+### 🏭 Industries
+
+| Column       | Description                                        |
+|--------------|----------------------------------------------------|
+| `company_id` | A unique identifier assigned to each company.      |
+| `industry`   | The industry sector in which the company operates. |
+
+### 🏢 Companies
+
+| Column       | Description                                                  |
+|--------------|--------------------------------------------------------------|
+| `company_id` | A unique identifier assigned to each company.                |
+| `company`    | The name of the unicorn company.                             |
+| `city`       | The city where the company is headquartered.                 |
+| `country`    | The country where the company is headquartered.              |
+| `continent`  | The continent where the company is headquartered.            |
+
+### **ER Diagram**
+All 4 tables are linked by company_id column. The ER diagram is given below.
+
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/ERD.png?raw=true)
 
 ## 📁 Folder Structure
