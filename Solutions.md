@@ -370,8 +370,7 @@ The chart highlights the top 10 fastest-growing unicorns based on the shortest t
 
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%209a.png?raw=true)
-###
-![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%209b.png?raw=true)
+
 # Q10: Find the Oldest Unicorns (Companies Founded the Longest Ago but Still Unicorns)
 ## Solution
 ```SQL
