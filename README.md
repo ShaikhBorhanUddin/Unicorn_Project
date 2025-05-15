@@ -1,15 +1,16 @@
 # 🦄 Unicorn Company Analysis
 <!-- Project Badges -->
 ![Made with](https://img.shields.io/badge/Made%20with-SQL-blue?logo=database)
-![License](https://img.shields.io/github/license/ShaikhBorhanUddin/Inventory_Management_Project)
-![Repo Size](https://img.shields.io/github/repo-size/ShaikhBorhanUddin/Inventory_Management_Project)
-![Stars](https://img.shields.io/github/stars/ShaikhBorhanUddin/Inventory_Management_Project?style=social)
-![Forks](https://img.shields.io/github/forks/ShaikhBorhanUddin/Inventory_Management_Project?style=social)
+![License](https://img.shields.io/github/license/ShaikhBorhanUddin/Unicorn_Company_Analysis)
+![Repo Size](https://img.shields.io/github/repo-size/ShaikhBorhanUddin/Unicorn_Company_Analysis)
+![Stars](https://img.shields.io/github/stars/ShaikhBorhanUddin/Unicorn_Company_Analysis?style=social)
+![Forks](https://img.shields.io/github/forks/ShaikhBorhanUddin/Unicorn_Company_Analysis?style=social)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql&logoColor=white)
 ![Data Visualization](https://img.shields.io/badge/Data%20Visualization-Tableau-E97627?logo=Tableau&logoColor=white)
 ![Git](https://img.shields.io/badge/Version%20Control-Git-orange?logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/Host-GitHub-black?logo=github)
 ![Project Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=flat-square)
+
 ###
 <img src="https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/unicorn_cropped.png?raw=true" alt="Dashboard" style="width:100%;"/>
 
