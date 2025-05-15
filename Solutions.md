@@ -289,6 +289,9 @@ This chart reveals insightful trends about the dominant industries across contin
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%207.png?raw=true)
 # Q8️: Find Top 20 Companies That Raised More Than Industry Average
+
+This question is crucial in the context of business intelligence because it helps identify companies that are outperforming their industry peers in attracting investor funding. Companies raising significantly more than the industry average often signal strong investor confidence, innovative business models, or aggressive growth strategies. Analyzing such outliers allows stakeholders—like investors, analysts, and strategic planners—to spot emerging market leaders, evaluate potential overvaluation risks, and benchmark funding expectations within industries. This insight supports smarter decision-making in areas such as investment allocation, competitive analysis, and market forecasting.
+
 ## Solution
 ```SQL
 SELECT c.company, f.funding, i.industry
@@ -303,6 +306,8 @@ WHERE f.funding > (
 ORDER BY f.funding DESC
 Limit 20;
 ```
+This SQL query retrieves the top 20 companies whose funding amounts exceed the average funding within their respective industries. It joins the `funding`, `industries`, and `companies` tables on the `company_id` to access the required data. The `WHERE` clause uses a correlated subquery to calculate the average funding for each industry by referencing the outer query's industry (`i.industry`). Only companies with funding greater than this industry-specific average are selected. The final result is sorted in descending order of funding and limited to 20 rows to show the most heavily funded outliers in their industries.
+
 ## Output
 |company           |funding    |industry                           |
 |------------------|-----------|-----------------------------------|
@@ -327,8 +332,11 @@ Limit 20;
 |Databricks        |3000000000 |Data management & analytics        |
 |SVOLT             |3000000000 |Auto & transportation              |
 
+The chart highlights the top 20 companies that have raised funding significantly above the average within their respective industries. **JUUL Labs** leads with **$14 billion** in the **Consumer & Retail** sector, far surpassing industry norms. Notably, **Bytedance** and **Argo AI** stand out in **Artificial Intelligence**, both securing billions in funding, indicating the high investor confidence in this tech-driven sector. The Other category, including companies like **Epic Games**, **SpaceX**, and **Northvolt**, reflects diverse but capital-intensive ventures. The presence of multiple companies in sectors like **Auto & Transportation**, **E-commerce & Direct-to-Consumer**, and **Supply Chain & Logistics** (e.g., Swiggy, J&T Express) suggests these industries attract substantial investment likely due to scalability and market demand. Overall, this chart provides valuable insight into which companies are considered high-potential by investors relative to their peers, making it an important lens for business intelligence and investment strategy.
+
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Images/Sheet%208.png?raw=true)
+
 # Q9️: Find the Fastest-Growing Unicorns (Shortest Time from Founding to Unicorn Status)
 ## Solution
 ```SQL
