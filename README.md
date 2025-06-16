@@ -86,7 +86,7 @@ Unicorn_Company_Analysis/
 
 ## 🧩 Solution Workflow
 
-Detailed solutions are documented in the [Solutions.md](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Solutions.md) file.
+Detailed solutions and relevant visualizations are documented in the [Solutions.md](https://github.com/ShaikhBorhanUddin/Unicorn_Company_Analysis/blob/main/Solutions.md) file.
 
 The workflow includes:
 1. **Database Design**: ERD creation and schema setup
