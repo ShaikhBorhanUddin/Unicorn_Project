@@ -176,7 +176,7 @@ Each visualization was carefully chosen to enhance understanding, enable pattern
 - Majority of unicorns were founded post-2010, suggesting acceleration in recent years.
 - Tiger Global and Sequoia Capital are among the most active investors—key VCs to watch.
 
-📌 Business Tip: Investors and startup founders should focus on tech-driven sectors in USA OR Asia and target growth funding rounds post-Series A.
+📌 **Business Tip:** Investors and startup founders should focus on tech-driven sectors in USA OR Asia and target growth funding rounds post-Series A.
 
 ## 💡 Tools Used
 
