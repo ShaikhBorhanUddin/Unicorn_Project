@@ -9,6 +9,8 @@
 ![Data Visualization](https://img.shields.io/badge/Data%20Visualization-Tableau-E97627?logo=Tableau&logoColor=white)
 ![Git](https://img.shields.io/badge/Version%20Control-Git-orange?logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/Host-GitHub-black?logo=github)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![Project Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=flat-square)
 
 ###
