@@ -79,6 +79,7 @@ Unicorn_Company_Analysis/
 ├── README.md
 ├── Solutions.md               # answer to SQL queries with visualizations
 ├── Unicorn_Project.sql        # SQL codes
+└── index.html                 # HTML and CSS code for the website
 ```
 ## 🛠️ Setup
 
