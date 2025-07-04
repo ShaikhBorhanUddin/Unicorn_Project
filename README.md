@@ -18,7 +18,7 @@
 
 ## 📍 Project Overview
 
-The **Unicorn Company Analysis** project aims to explore and analyze the global landscape of unicorn startups — privately held companies valued at over $1 billion. Using Python and data visualization libraries like Matplotlib and Seaborn, this project uncovers key insights about the distribution, growth trends, and industry representation of unicorns across the world. The main objectives of this project include:
+The **Unicorn Company Analysis** project aims to explore and analyze the global landscape of unicorn startups — privately held companies valued at over $1 billion. Using SQL and data visualization tool like Tableau, this project uncovers key insights about the distribution, growth trends, and industry representation of unicorns across the world. The main objectives of this project include:
 - Understanding the historical growth of unicorns over time.
 - Identifying the top countries and industries producing the most unicorns.
 - Analyzing valuation ranges and spotting the highest-valued companies.
