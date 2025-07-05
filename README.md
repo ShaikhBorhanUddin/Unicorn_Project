@@ -10,6 +10,8 @@
 ![Git](https://img.shields.io/badge/Version%20Control-Git-orange?logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/Host-GitHub-black?logo=github)
 <img src="https://img.shields.io/badge/Web%20Development-HTML5%20%7C%20CSS3-red?style=flat" alt="Web Development: HTML5 | CSS3">
+![Excel](https://img.shields.io/badge/Data%20Cleaning-Excel-217346?logo=microsoft-excel&logoColor=white)
+![Issues](https://img.shields.io/github/issues/ShaikhBorhanUddin/Unicorn_Company_Analysis)
 ![Project Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=flat-square)
 
 ###
