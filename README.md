@@ -173,7 +173,7 @@ For **country-specific and region-based queries**, such as the number of unicorn
 <img src="Images/Sheet 17.png" alt="Payment Type Distribution" width="49%" />
 </div>
 
-Each visualization was carefully chosen to enhance understanding, enable pattern recognition, and support effective storytelling through data. For all visualization, please follow the [website](https://shaikhborhanuddin.github.io/Unicorn_Company_Analysis).
+Each visualization was carefully chosen to enhance understanding, enable pattern recognition, and support effective storytelling through data. For all visualization, please click the [report](https://shaikhborhanuddin.github.io/Unicorn_Company_Analysis).
 
 ## 🎯 Key Insights & Recommendations
 - The USA and China account for 80% of unicorns—indicating regional startup dominance.
